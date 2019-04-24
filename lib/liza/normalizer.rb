@@ -24,11 +24,15 @@ module Liza
     private
 
     def fetch
-      response = HTTP.get(BASE_URL, params: { direccion: address })
+      response = HTTP.get(BASE_URL, params: params)
       json = JSON.parse(response)
       json["direccionesNormalizadas"]
     rescue HTTP::ConnectionError
       raise ConnectionError
+    end
+
+    def params
+      { direccion: address, geocodificar: true }
     end
   end
 end

@@ -10,6 +10,10 @@ module Liza
       assert_nil example.number
     end
 
+    def test_that_it_has_coordinates
+      assert_equal [-34.562037, -58.456695], example.coordinates
+    end
+
     def test_that_it_has_a_normalized_address
       assert_equal "CABILDO AV. y JURAMENTO, CABA", example.normalized_address
     end
@@ -28,6 +32,11 @@ module Liza
 
     def test_that_it_has_an_area
       assert_equal "CABA", example.area
+    end
+
+    def test_that_it_has_a_map_url
+      url = "https://www.google.com/maps/search/-34.562037,-58.456695"
+      assert_equal url, example.map_url
     end
 
     private
