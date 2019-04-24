@@ -2,20 +2,23 @@ require "http"
 
 module Liza
   class Normalizer
+    include Enumerable
+
     BASE_URL = "https://servicios.usig.buenosaires.gob.ar/normalizar"
 
-    attr_reader :address
+    attr_reader :address, :results
 
     def initialize(address)
       @address = address
+      @results = fetch.map { |item| Address.new(item) }
+    end
+
+    def each(&block)
+      results.each(&block)
     end
 
     def suggestions
-      results.map(&:normalized_address)
-    end
-
-    def results
-      fetch.map(&Address.method(:new))
+      results.map(&:to_s)
     end
 
     private
