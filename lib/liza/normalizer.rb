@@ -5,7 +5,7 @@ module Liza
   class Normalizer
     include Enumerable
 
-    BASE_URL = "https://servicios.usig.buenosaires.gob.ar/normalizar"
+    BASE_URL = "https://servicios.usig.buenosaires.gob.ar/normalizar".freeze
 
     attr_reader :address, :results
 
