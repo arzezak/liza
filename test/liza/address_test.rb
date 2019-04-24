@@ -43,7 +43,7 @@ module Liza
 
     def example
       liza = Normalizer.new("Cabildo y Juramento")
-      liza.results.first
+      liza.first
     end
   end
 end
