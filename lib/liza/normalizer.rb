@@ -1,4 +1,5 @@
 require "http"
+require "json"
 
 module Liza
   class Normalizer
