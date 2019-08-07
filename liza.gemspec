@@ -8,13 +8,11 @@ Gem::Specification.new do |spec|
   spec.version       = Liza::VERSION
   spec.authors       = ["Ariel Rzezak"]
   spec.email         = ["arzezak@gmail.com"]
-
   spec.summary       = "Wrapper around USIG's Normalizador de Direcciones."
   spec.description   = "Ruby wrapper around USIG's Normalizador de Direcciones."
   spec.homepage      = "https://github.com/arzezak/liza"
   spec.license       = "MIT"
-
-  spec.files = `git ls-files`.split("\n")
+  spec.files         = `git ls-files`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.17"
