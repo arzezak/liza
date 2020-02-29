@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "http", "~> 4.1", ">= 4.1.1"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "minitest-reporters", "~> 1.3", ">= 1.3.6"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "vcr", "~> 4.0"
   spec.add_development_dependency "webmock", "~> 3.5", ">= 3.5.1"
 end
