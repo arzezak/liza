@@ -37,7 +37,7 @@ GEM
       ruby-progressbar
     public_suffix (4.0.6)
     rake (13.0.6)
-    rexml (3.3.3)
+    rexml (3.3.6)
       strscan
     ruby-progressbar (1.11.0)
     strscan (3.1.0)
